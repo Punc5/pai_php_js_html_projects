@@ -9,17 +9,16 @@
     <?php
     // Napisz skrypt, w którym za pomocą pętli for obliczysz iloczyn z n wylosowanych liczb z przedziału od 1 do 10.
         $iloczyn = 1;
-        $n = 1;
         $n = rand(1, 10);
 
         for ($i = 1; $i <= $n; $i++) {
             $liczba = rand(1, 10);
             $iloczyn *= $liczba;
 
-            echo $liczba. " * <br>";
-        }  
+            echo $liczba. " * ";
+        } 
 
-        echo "= " .$iloczyn. "<br>";
+        echo " = " . $iloczyn . "<br>";
     ?>
 </body>
 </html>
