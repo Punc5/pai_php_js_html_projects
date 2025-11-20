@@ -14,12 +14,12 @@
 
     for ($i = 1; $i <= $n; $i++) {
         if ($i % 2 == 0) {
-            $suma += $k * (-1);
+            $suma -= $k;
         } else {
             $suma += $k;
         }
         
-        $k = $k + 2;
+        $k += 2;
     }
 
     echo "Suma wartości = " .$suma;
