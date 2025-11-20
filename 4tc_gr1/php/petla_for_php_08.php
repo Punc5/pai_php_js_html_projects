@@ -15,7 +15,7 @@
 
     for ($i = 1; $i <= $n; $i++) {
         $suma += (3 + $k) / (2 * $k);
-        $k *= 2; // Przesunięcie tej linii, aby używać zaktualizowanej wartości k
+        $k *= 2;
     }
 
     echo "Wartość = " . $suma; 
