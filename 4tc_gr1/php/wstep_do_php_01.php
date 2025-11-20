@@ -6,32 +6,25 @@
     <title>Wstęp do php - część 1.</title>
 </head>
 <body>
-    <form method="GET">
-        <label for="A">A:</label>
-        <input type="number" id="A" name="A" placeholder="Wpisz liczbę dla a" required>
-        <br><br>
-
-        <label for="B">B:</label>
-        <input type="number" id="B" name="B" placeholder="Wpisz liczbę dla b" required>
-        <br><br>
-
-        <label for="C">C:</label>
-        <input type="number" id="C" name="C" placeholder="Wpisz liczbę dla c" required>
-        <br><br>
-        
+    <form method="POST">
+        A: <input type="number" name="A" required>
+        B: <input type="number" name="B" required>
+        C: <input type="number" name="C" required>
         <input type="submit" value="Sprawdź">
     </form>
 
     <?php
-        // Napisz skrypt, w którym sprawdzisz czy z 3 przypisanych długości odcinków można zbudować trojkąt
-        $a = $_GET['A'] ?? null;
-        $b = $_GET['B'] ?? null;
-        $c = $_GET['C'] ?? null;
+        // Napisz skrypt, w którym sprawdzisz czy z 3 przypisanych długości odcinków można zbudować trójkąt
+        if (isset($_POST['A'], $_POST['B'], $_POST['C'])) {
+            $a = $_POST['A'];
+            $b = $_POST['B'];
+            $c = $_POST['C'];
 
-         if (($a + $b) > $c && ($a + $c) > $b && ($b + $c) > $a) {
-            echo "Trójkąt o wymiarach: " . $a . ", " . $b . ", " . $c . " można zbudować.<br>";
-        } else {
-            echo "Nie można zbudować trójkąta o podanych wymiarach. Podaj inne wartości.<br>";
+            if (($a + $b) > $c && ($a + $c) > $b && ($b + $c) > $a) {
+                echo "Można zbudować trójkąt.";
+            } else {
+                echo "Nie można zbudować trójkąta.";
+            }
         }
     ?>
 </body>
