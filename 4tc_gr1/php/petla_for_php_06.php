@@ -25,7 +25,11 @@
         $q += 4;
     }
 
-    echo "Wartość = " .$suma / $iloczyn;
+    if ($iloczyn != 0) {
+        echo "Wartość = " . ($suma / $iloczyn);
+    } else {
+        echo "Iloczyn wynosi zero, nie można dzielić.";
+    }
     ?>
 </body>
 </html>
