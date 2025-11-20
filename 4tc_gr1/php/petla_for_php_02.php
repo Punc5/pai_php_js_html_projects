@@ -7,14 +7,17 @@
 </head>
 <body> 
     <?php
-    // Napisz skrypt, w którym za pomocą pętli for wyświetlisz ciąg w postaci: 2, 4, 6, 8, 10, 12,...
-        $k = 2;
-        $n = rand(2, 10);
+    // Generuj ciąg parzystych liczb
+    $k = 2;
+    $n = rand(2, 10);
 
-        for ($i = 1; $i <= $n; $i++) {
-            echo $k. ", ";
-            $k = $k + 2;
-        }  
+    for ($i = 1; $i <= $n; $i++) {
+        echo $k;
+        if ($i < $n) {
+            echo ", ";
+       } 
+        $k += 2;
+    }  
     ?>
 </body>
 </html>
