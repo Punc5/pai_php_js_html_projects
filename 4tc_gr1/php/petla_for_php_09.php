@@ -12,10 +12,10 @@
     $n = rand(2, 10);
 
     for ($i = 1; $i <= $n; $i++) {
-        $suma += ($i + 3);
+        $suma += ($i * M_PI + 3 / $n);
     }
 
-    $wynik = $suma + $M_PI;
+    $wynik = $suma;
 
     echo "Wartość = " . $wynik; 
     ?>
