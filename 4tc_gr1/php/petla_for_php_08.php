@@ -14,11 +14,11 @@
     $k = 2;
 
     for ($i = 1; $i <= $n; $i++) {
-        $k *= 2;
         $suma += (3 + $k) / (2 * $k);
+        $k *= 2; // Przesunięcie tej linii, aby używać zaktualizowanej wartości k
     }
 
-    echo "Wartość = " .$suma; 
+    echo "Wartość = " . $suma; 
     ?>
 </body>
 </html>
