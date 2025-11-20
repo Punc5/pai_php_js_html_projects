@@ -23,7 +23,7 @@
 
     for ($i = 1; $i <= $n; $i++) {
         $iloczyn_2 *= $q;
-        $q *= 0.1; // Poprawka
+        $q *= 0.1;
     }
 
     echo "Wartość = " . ($iloczyn_1 / $iloczyn_2); 
