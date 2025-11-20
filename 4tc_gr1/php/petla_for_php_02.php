@@ -7,7 +7,7 @@
 </head>
 <body> 
     <?php
-    // Generuj ciąg parzystych liczb
+    // Napisz skrypt, w którym za pomocą pętli for wyświetlisz ciąg w postaci:
     $k = 2;
     $n = rand(2, 10);
 
